@@ -1,29 +1,17 @@
-<h1> <%= @candy.name %></h1>
+<h1> Results </h1>
 
-
-<div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-product-infos">
-    <h2>Product name</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
+<div class='container'>
+  <div class="card-trip">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2> name</h2>
+        <p> composition</p>
+        <p> price</p>
+      </div>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
   </div>
 </div>
 
-
-<div class="card-product">
-  <img src="https://i.pinimg.com/736x/cd/bd/c8/cdbdc86d885fbbe1c3a3e739d6e565da.jpg" />
-  <div class="card-product-infos">
-    <h2><%= @candy.name%></h2>
-    <p>
-      <ul>
-        <% @cocktail.doses.each do |dose| %>
-        <li> <%= dose.description %> of <%= dose.ingredient.name %>
-        <%= link_to "❌", dose_path(dose),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
-        <% end %>
-        </li>
-      </ul>
-</p>
-  </div>
-</div>
+<!-- to adapt once the search form will be up to date -->
