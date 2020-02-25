@@ -2,10 +2,10 @@
   <img src="https://i.pinimg.com/736x/cd/bd/c8/cdbdc86d885fbbe1c3a3e739d6e565da.jpg" />
   <div class="card-product-infos">
     <h2><%= @candy.name%></h2>
-    <p>
       <ul>
-        <li> <%= @candy.name %>
+        <li><%= @candy.name %>
         <li><p><%= @candy.composition %></p></li>
+        <%= @candy.price %>
         <%= link_to "❌", candy_path(@candy),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %>
