@@ -4,9 +4,10 @@
     <h2><%= @candy.name%></h2>
     <p>
       <ul>
-        <% @cocktail.doses.each do |dose| %>
-        <li> <%= dose.description %> of <%= dose.ingredient.name %>
-        <%= link_to "❌", dose_path(dose),
+        <% @candy.each do |candy| %>
+        <li> <%= candy.name %>
+          <%= candy.composition %>
+        <%= link_to "❌", candy_path(candy),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %>
         <% end %>
