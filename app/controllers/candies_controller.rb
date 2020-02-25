@@ -44,7 +44,7 @@ class CandiesController < ApplicationController
   private
 
   def candy_params
-    params.require(:candy).permit(:name)
+    params.require(:candy).permit(:name, :composition, :price)
   end
 
 end
