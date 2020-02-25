@@ -43,31 +43,20 @@
     <h1>ANYO</h1>
     <p>Eat candies</p>
     <div class="topnav">
-  <input type="text" placeholder="Enter candy name">
+  <input type="text" value="name" placeholder="Enter candy name">
 </div>
 
-    <a class="btn btn-flat" href="#">Buy now</a>
+   <%= link_to "Search", candies_path, class:"btn btn-flat" %>
   </div>
 </div>
 
 
-<div class="box1">
-  <h2>BOX1</h2>
+
+<div class="cards">
+  <% @candies.each do |candy|%>
+    <div class="box">
+      <%= link_to candy.name, candy_path(candy), class:"btn btn-flat" %>
+    </div>
+    <% end %>
 </div>
-
-
-<div class="box2">
-  <h2>BOX2</h2>
-</div>
-
-
-<div class="box3">
-  <h2>BOX1</h2>
-</div>
-
-
-<div class="box4">
-  <h2>BOX2</h2>
-</div>
-
 

@@ -33,7 +33,6 @@
 }
 
 
-
 .topnav input[type=text] {
 
   float: left;
@@ -49,11 +48,10 @@
 }
 
 
-.box1 {
+.box {
   background: rgb(255,0,0);
   background: linear-gradient(180deg, rgba(255,0,0,1) 4%, rgba(83,0,255,0.19511554621848737) 89%);
   display: inline-block;
-  width: 300px;
   height: 250px;
   border: 5px solid black;
   padding: 20px;
@@ -61,52 +59,6 @@
   border-radius: 10px;
   text-align: center;
 }
-
-.box2 {
-  text-align: center;
-  background: rgb(255,0,0);
-  background: linear-gradient(180deg, rgba(255,0,0,1) 4%, rgba(83,0,255,0.19511554621848737) 89%);
-  display: inline-block;
-  width: 300px;
-  height: 250px;
-  border: 5px solid black;
-  padding: 20px;
-  margin: 30px 5px;
-  border-radius: 10px;
-}
-
-
-.box3 {
-  text-align: center;
-  background: rgb(255,0,0);
-  background: linear-gradient(180deg, rgba(255,0,0,1) 4%, rgba(83,0,255,0.19511554621848737) 89%);
-  display: inline-block;
-  width: 300px;
-  height: 250px;
-  border: 5px solid black;
-  padding: 20px;
-  margin: 5px;
-  border-radius: 10px;
-}
-
-
-.box4 {
-  text-align: center;
-  background: rgb(255,0,0);
-  background: linear-gradient(180deg, rgba(255,0,0,1) 4%, rgba(83,0,255,0.19511554621848737) 89%);
-  display: inline-block;
-  width: 300px;
-  height: 250px;
-  border: 5px solid black;
-  padding: 20px;
-  margin: 5px;
-  border-radius: 10px;
-}
-
-
-
-
-
 
 
 .footer {
@@ -134,4 +86,11 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  margin: 20px 50px;
 }
