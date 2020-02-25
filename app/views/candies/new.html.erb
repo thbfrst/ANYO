@@ -1,8 +1,1 @@
-<%= simple_form_for(@candy) do |f| %>
-<div>
-  <%= f.input :name %>
-  <%= f.input :composition %>
-</div>
-
-<%= f.submit class: 'btn btn-primary' %>
-<% end %>
+<%= render 'form', candy: @candy %>
