@@ -1,0 +1,9 @@
+<%= simple_form_for(@candy) do |f| %>
+<div>
+  <%= f.input :name %>
+  <%= f.input :composition %>
+  <%= f.input :price %>
+</div>
+
+<%= f.submit class: 'btn btn-primary' %>
+<% end %>
