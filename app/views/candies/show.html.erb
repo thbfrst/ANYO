@@ -2,15 +2,14 @@
   <img src="https://i.pinimg.com/736x/cd/bd/c8/cdbdc86d885fbbe1c3a3e739d6e565da.jpg" />
   <div class="card-product-infos">
     <h2><%= @candy.name%></h2>
-    <p>
       <ul>
-        <% @candy.each do |candy| %>
-        <li> <%= candy.name %>
-          <%= candy.composition %>
-        <%= link_to "❌", candy_path(candy),
+        <li><%= @candy.name %>
+        <li><p><%= @candy.composition %></p></li>
+        <%= @candy.price %>
+        <%= link_to "❌", candy_path(@candy),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %>
-        <% end %>
+
         </li>
       </ul>
 </p>
