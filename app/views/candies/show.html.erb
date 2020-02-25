@@ -1,17 +1,24 @@
-<div class="card-product">
-  <img src="https://i.pinimg.com/736x/cd/bd/c8/cdbdc86d885fbbe1c3a3e739d6e565da.jpg" />
-  <div class="card-product-infos">
-    <h2><%= @candy.name%></h2>
-      <ul>
-        <li><%= @candy.name %>
-        <li><p><%= @candy.composition %></p></li>
-        <%= @candy.price %>
-        <%= link_to "❌", candy_path(@candy),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
+<%= link_to "Basket", my_orders_orders_path %>
+  <div class="card-product">
+    <img src="https://i.pinimg.com/736x/cd/bd/c8/cdbdc86d885fbbe1c3a3e739d6e565da.jpg" />
+    <div class="card-product-infos">
+      <h2><%= @candy.name%></h2>
+        <ul>
+          <li><%= @candy.name %>
+          <li><p><%= @candy.composition %></p></li>
+          <li><p><%= @candy.price %></p></li>
+          <%#= link_to "Add to cart", candy_order_items_path %>
 
-        </li>
-      </ul>
-</p>
+         <%= simple_form_for [@candy, @order_item] do |f| %>
+          <div>
+            <%= f.input :quantity %>
+          </div>
+            <%= f.submit class: 'btn btn-primary' %>
+          <% end %>
+
+          <%= link_to "Back home", root_path%>
+          </li>
+        </ul>
+  </p>
+    </div>
   </div>
-</div>
