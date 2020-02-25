@@ -4,13 +4,12 @@
     <h2><%= @candy.name%></h2>
     <p>
       <ul>
-        <% @candy.each do |candy| %>
-        <li> <%= candy.name %>
-          <%= candy.composition %>
-        <%= link_to "❌", candy_path(candy),
+        <li> <%= @candy.name %>
+        <li><p><%= @candy.composition %></p></li>
+        <%= link_to "❌", candy_path(@candy),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %>
-        <% end %>
+
         </li>
       </ul>
 </p>
