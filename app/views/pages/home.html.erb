@@ -32,26 +32,32 @@
   </div>
 </div>
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://images-na.ssl-images-amazon.com/images/I/71sBXasyMLL._SL1200_.jpg);">
-  <div class="container">
-    <h1>ANYO</h1>
-    <p>Eat candies</p>
-    <div class="topnav">
-  <input type="text" value="name" placeholder="Enter candy name">
-</div>
+<div class="container">
+  <div class="first-card">
+    <div class="logo-search">
+     <div class="logo">
+      ANYO
+      </div>
+      <div class="topnav">
+        <input type="text" value="name" placeholder="Enter candy name">
+      </div>
+      <span class="search-btn">
+      <%= link_to "Search", candies_path, class:"btn btn-flat" %>
+      </span>
+    </div>
+      <div class="home-text">
+        <h2>ANYO is a online store that let you purchase all kind of korean candies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. </h2>
+      </div>
+  </div>
 
-   <%= link_to "Search", candies_path, class:"btn btn-flat" %>
+  <div class="cards">
+    <% @candies.each do |candy|%>
+      <div class="box">
+        <%= link_to candy.name, candy_path(candy), class:"btn btn-flat" %>
+      </div>
+      <% end %>
   </div>
 </div>
-
-<div class="cards">
-  <% @candies.each do |candy|%>
-    <div class="box">
-      <%= link_to candy.name, candy_path(candy), class:"btn btn-flat" %>
-    </div>
-    <% end %>
-</div>
-
 
 <div class="footer">
   <div class="footer-links">
