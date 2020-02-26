@@ -3,6 +3,12 @@ class CandiesController < ApplicationController
 
   def index
     @candies = Candy.all
+    @markers = @candies.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def show
