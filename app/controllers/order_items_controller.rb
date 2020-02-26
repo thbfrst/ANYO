@@ -14,17 +14,14 @@ class OrderItemsController < ApplicationController
 
 
   def create
-    #creer panier ou pas
-
     #creer un panier si payed true
-
-
-    #utiliser le panier existant si payed false
-
+    @order = current_order
+    if @order.nil?
+      @order = Order.create(user: current_user)
+    end
     @order_item = OrderItem.new(order_items_params)
     @candy = Candy.find(params[:candy_id])
     @order_item.candy = @candy
-    @order = Order.create(user: current_user)
     @order_item.order = @order
     if @order_item.save
       redirect_to @candy
@@ -48,7 +45,7 @@ class OrderItemsController < ApplicationController
   def destroy
     @order_item = OrderItem.find(params[:id])
     @order_item.destroy
-    redirect_to order_items_path
+    redirect_to my_orders_orders_path
   end
 
 

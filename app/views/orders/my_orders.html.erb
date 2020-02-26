@@ -1,0 +1,14 @@
+<h1> Your basket </h1>
+  <% @my_orders.each do |order|%>
+    <%  order.order_items %>
+    <ul>
+      <% order.order_items.each do |item| %>
+      <li> <%= item.candy.name%> <%= item.candy.composition%> <%= item.candy.price %> $
+        <%= link_to "Remove", order_item_path(item),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
+

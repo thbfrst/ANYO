@@ -2,8 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :candies do
-    resources :order_items
+    resources :order_items, only: [:create]
   end
+
+  resources :order_items, only: [:destroy]
+
   resources :orders, only: [:show]  do
     collection  do
       get "my_orders"
