@@ -34,24 +34,24 @@
 
 
 .topnav input[type=text] {
-
   float: left;
-  border-radius: 20px;
+  border-radius: 100px;
   height: 50px;
-  width: 400px;
   padding: 6px 10px;
   border: none;
-  margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
-  text-align: left
+  text-align: left;
+  border: 5px solid black;
+  color:#9D9D9D;
+  max-width: 800px;
 }
 
 
 .box {
   justify-content: space-around;
   background: rgb(255,0,0);
-  background: linear-gradient(180deg, rgba(255,0,0,1) 4%, rgba(83,0,255,0.19511554621848737) 89%);
+background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(210,0,46,0.9009978991596639) 18%, rgba(45,0,219,0.9346113445378151) 85%, rgba(10,0,255,0.9374124649859944) 99%);
   display: inline-block;
   height: 250px;
   border: 5px solid black;
@@ -61,6 +61,18 @@
   text-align: center;
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  margin: 20px 50px;
+}
+
+.first-card{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}
 
 .footer {
   background: #F4F4F4;
@@ -89,9 +101,28 @@
   color: #D23333;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 25px;
-  margin: 20px 50px;
+
+.logo{
+  background: rgb(255,0,0);
+background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(210,0,46,0.9009978991596639) 18%, rgba(45,0,219,0.9346113445378151) 85%, rgba(10,0,255,0.9374124649859944) 99%);
+  border: 5px solid black;
+  border-radius: 100px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 15px;
+  color:black;
+  font-size: 800%;
+  text-align: center;
+}
+
+.logo h1{
+  color:black;
+  font-size: 690%;
+  text-align: center;
+}
+
+.search-btn{
+  border: 5px solid black;
+  border-radius: 100px;
+  padding: 6px 10px;
+  margin-top: 50px;
 }
