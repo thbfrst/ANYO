@@ -10,17 +10,20 @@ candies_attributes = [
   {
     name:         'Pushito',
     composition:  'Small candies, 3 flavors : soda (blue), grape (pink) and cola (yellow).',
-    price:        6
+    price:        6,
+    user_id: 1
   },
   {
     name:         'Monster Stamp',
     composition:  'Ramune type candy. They can be used as fun stamps and change the color of your tongue when you eat them!.',
-    price:        10
+    price:        10,
+    user_id: 1
   },
   {
     name:         'Dagashi',
     composition:  '8 random dagashi sweet and savory.',
-    price:        8
+    price:        8,
+    user_id: 1
   }
 ]
 Candy.create!(candies_attributes)

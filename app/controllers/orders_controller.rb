@@ -19,11 +19,11 @@ class OrdersController < ApplicationController
 
   def my_orders
    @my_orders = Order.where(user: current_user)
-   raise
   end
 
   def show
     @orders = Orders.find(params[:id])
   end
+
 
 end
