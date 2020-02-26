@@ -1,3 +1,4 @@
+
 </div>
 
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
@@ -13,7 +14,12 @@
         <a class="nav-link" href="#">Home</a>
       </li>
       <li class="nav-item">
+
         <%= link_to "Login", user_session_path, class:"nav-link" %>
+
+        <%= link_to "Sign in", new_user_session_path, class:"nav-link" %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
+
       </li>
       <li class="nav-item dropdown">
         <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
@@ -26,7 +32,6 @@
   </div>
 </div>
 
-
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://images-na.ssl-images-amazon.com/images/I/71sBXasyMLL._SL1200_.jpg);">
   <div class="container">
     <h1>ANYO</h1>
@@ -38,8 +43,6 @@
    <%= link_to "Search", candies_path, class:"btn btn-flat" %>
   </div>
 </div>
-
-
 
 <div class="cards">
   <% @candies.each do |candy|%>

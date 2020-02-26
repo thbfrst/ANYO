@@ -16,6 +16,7 @@ class CandiesController < ApplicationController
 
   def create
     @candy = Candy.new(candy_params)
+    @candy.user = current_user
     if @candy.save
       redirect_to candy_path(@candy)
     else
@@ -24,7 +25,7 @@ class CandiesController < ApplicationController
   end
 
   def edit
-    @candy = Candy.find(params[:id])
+    @candy = current_user.candies.find_by(id: params[:id])
   end
 
   def update

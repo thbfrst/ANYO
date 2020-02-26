@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_many :orders
 
   #enlever le panier si pas d'user
+
+  has_many :candies
+
 end
