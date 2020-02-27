@@ -4,8 +4,9 @@
   <img src="https://cdn.hellosubscription.com/wp-content/uploads/2018/12/28012446/korean-snack-box-january-2019-6.jpg" />
   <div class="card-product-infos">
               <p><strong><%= item.candy.name%></strong> - <%= item.candy.composition%>
-              <span><p>Total price : <%= item.candy.price %>  $</p></span>
+              <span><p>Price : <%= item.candy.price %>  $</p></span>
               <span><p>Total quantity : <%= item.quantity %> </p></span>
+              <span><p>Pick-up time : <%= item.minutes.to_i %> minutes </p></span>
               <%= link_to "❌", order_item_path(item),
                         method: :delete,
                         data: { confirm: "Are you sure?" } %></p>
@@ -15,7 +16,7 @@
     <% end %>
 
 
-  <%= link_to "Back home", root_path, class:'btn btn-primary'%>
+  <%= link_to "Back", candies_path, class:'btn btn-primary'%>
 
 
 <div class="box">

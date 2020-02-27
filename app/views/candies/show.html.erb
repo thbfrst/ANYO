@@ -12,12 +12,17 @@
   </div>
   <%= simple_form_for [@candy, @order_item] do |f| %>
   <div class="qty">
-  <%= f.input :quantity, input_html: { min: '1', max: @candy.availability, step: 'any' } %>
+  <%= f.input :quantity, placeholder: "1", input_html: { min: '1', max: @candy.availability, step: 'any' } %>
   </div>
   Time before pick-up:
-  <%= f.select :minutes, ('01'..'59').to_a.map{|min| "#{min} minutes" } %>
+  <%= f.time_field :minutes,
+      value: "%H:%M",
+      min: '00:15:00',
+      max: '01:00:00' %>
+  <p><span>Min pick-up time is 15min, max is 1hour</span></p>
+
   <%= f.submit "Add to card", class: 'btn-primary' %>
   <% end %>
 </div>
 
-<%= link_to "Back home", root_path, class:'btn btn-primary'%>
+<%= link_to "Back", candies_path , class:'btn btn-primary'%>
