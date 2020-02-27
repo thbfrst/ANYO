@@ -3,6 +3,11 @@ class CandiesController < ApplicationController
 
   def index
     @candies = Candy.all
+      if params[:query].present?
+        sql_query = "composition ILIKE :query"
+         @candies = Candy.where(sql_query, query: "%#{params[:query]}%")
+        end
+
     @markers = @candies.map do |flat|
       {
         lat: flat.latitude,
