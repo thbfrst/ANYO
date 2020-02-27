@@ -6,9 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
-Candy.destroy_all
-
 user = User.create(email: "seed@seed.seed", password: "password", password_confirmation: "password")
 
 candies_attributes = [
@@ -17,6 +14,7 @@ candies_attributes = [
     composition:  'Small candies, 3 flavors : soda (blue), grape (pink) and cola (yellow).',
     price:        6,
     address: 'Boulevard Anspach 89 1000 Brussels',
+    availability: 5,
     user: user
   },
   {
@@ -24,6 +22,7 @@ candies_attributes = [
     composition:  'Ramune type candy. They can be used as fun stamps and change the color of your tongue when you eat them!.',
     price:        10,
     address: 'Rue Saint-Pierre 59, 1000 Bruxelles',
+    availability: 5,
     user: user
   },
   {
@@ -31,6 +30,7 @@ candies_attributes = [
     composition:  '8 random dagashi sweet and savory.',
     price:        8,
     address: 'RChaussée de Mons 125, 1070 Anderlecht',
+    availability: 5,
     user: user
   },
   {
@@ -38,6 +38,7 @@ candies_attributes = [
     composition:  'Box of sweet Kdy.',
     price:        8,
     address: 'Avenue Georges Henri 316, 1200 Woluwe-Saint-Lambert',
+    availability: 5,
     user: user
   }
 ]

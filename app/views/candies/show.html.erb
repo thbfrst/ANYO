@@ -6,12 +6,13 @@
       <h2><%= @candy.name %></h2>
       <p><%= @candy.composition %></p>
       <p><span> <%= @candy.address %></span></p>
+      <p><span> Available boxes: <%= @candy.availability %></span></p>
     </div>
     <h2 class="card-trip-pricing"><%= @candy.price%> $</h2>
   </div>
   <%= simple_form_for [@candy, @order_item] do |f| %>
   <div class="qty">
-  <%= f.input :quantity, input_html: { min: '0', step: 'any' } %>
+  <%= f.input :quantity, input_html: { min: '0', max: @candy.availability, step: 'any' } %>
   </div>
   <%= f.submit "Add to card", class: 'btn-primary' %>
   <% end %>

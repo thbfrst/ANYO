@@ -10,4 +10,5 @@ class Candy < ApplicationRecord
   validates :composition, presence: true
   validates :price, presence: true
   validates :address, presence: true
+  validates :availability, presence: true
 end
