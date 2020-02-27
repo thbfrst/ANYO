@@ -25,24 +25,6 @@ import mapboxgl from 'mapbox-gl';
 
 // export { initMapbox };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const initMapbox = () => {
   const mapElement = document.getElementById('map');
 
@@ -71,20 +53,4 @@ const initMapbox = () => {
 };
 
 export { initMapbox };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

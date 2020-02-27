@@ -22,7 +22,7 @@
   <% @my_orders.each do |order|%>
     <% order.order_items.each do |item| %>
       <ul>
-        <%= item.candy.name %> - <%= item.quantity %> boxes for <%= item.candy.price %> $
+        <%= item.candy.name %> - <%= item.quantity %> box(es)
       </ul>
       <% end %>
   <% end %>

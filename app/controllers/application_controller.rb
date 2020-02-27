@@ -11,10 +11,7 @@ class ApplicationController < ActionController::Base
       current_order = current_user.orders.last
       if current_order.present? && !current_order.payed
         @current_order = current_order
-        return current_order
       end
     end
-    return nil
   end
-
 end
