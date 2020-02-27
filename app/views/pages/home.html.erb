@@ -6,26 +6,28 @@
      <div class="logo">
       ANYO
       </div>
-      <div class="topnav">
-        <input type="text" value="name" placeholder="Enter candy name">
-      </div>
-      <span class="search-btn">
-      <%= link_to "Search", candies_path, class:"btn btn-flat" %>
-      </span>
     </div>
       <div class="home-text">
         <h2>ANYO is a online store that let you purchase all kind of korean candies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. </h2>
       </div>
   </div>
+</div>
 
-  <div class="cards">
-    <% @candies.each do |candy|%>
-      <div class="box">
-        <%= link_to candy.name, candy_path(candy), class:"btn btn-flat" %>
-      </div>
-      <% end %>
+<div class="container">
+  <div class="topnav">
+    <input type="text" placeholder="Enter your favorite flavor">
+  </div>
+  <span class="search-btn">
+    <%= link_to "Search", candies_path, class:"btn btn-flat" %>
+  </span>
+  <div class="topnav">
+    <%= link_to "Sell your candies", new_candy_path, class:"btn btn-primary" %>
+  </div>
+  <div class="topnav">
+    <%= link_to "Show all candies", candies_path, class:"btn btn-primary" %>
   </div>
 </div>
+
 
 <div class="footer">
   <div class="footer-links">

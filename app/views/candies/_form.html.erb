@@ -2,8 +2,9 @@
 <%= simple_form_for(@candy) do |f| %>
   <%= f.input :name %>
   <%= f.input :composition %>
-  <%= f.input :price %>
-
+  <%= f.input :address%>
+  <%= f.input :price, input_html: { min: '0', step: 'any' } %>
+  <%= f.input :availability, input_html: { min: '0', step: 'any' } %>
 
 <%= f.submit class: 'btn btn-primary' %>
 <% end %>
