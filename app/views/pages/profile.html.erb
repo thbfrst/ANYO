@@ -1,0 +1,26 @@
+<div class="logo2">
+      ANYO
+      </div>
+<div class="topname">
+  Hello <%= @username %>
+</div>
+
+
+<div class="box">
+
+    <ul>
+        <% @orders.each do |order|%>
+          You ordered the following items:
+          <%  order.order_items.each do |order_item|%>
+         <li>  <%= order_item.candy.name %></li>
+          <%end%>
+    <%end%>
+     </ul>
+
+    <div class="box2">You have the following items on sale:
+      <li><%= @candies.last.name %></li>
+    </div>
+
+
+</div>
+
