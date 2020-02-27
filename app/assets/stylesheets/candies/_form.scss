@@ -14,15 +14,13 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-      display: flex;
+    display: flex;
   }
 
-
-
- #candy_name {
+  #candy_name {
     background: white;
     border-radius: 50px;
-     border-width:2px;
+    border-width:2px;
     border-color: black;
     box-shadow: 2px 3px 3px lightgray;
     max-width: 700px;
@@ -31,8 +29,19 @@
     margin-right: auto;
    }
 
-
   #candy_price {
+    background: white;
+    border-radius: 50px;
+    border-width:2px;
+    border-color: black;
+    box-shadow: 2px 3px 3px lightgray;
+    max-width: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #candy_address {
     background: white;
     border-radius: 50px;
     border-width:2px;
@@ -66,7 +75,6 @@
     padding: 20px;
     background: rgb(255,0,0);
     background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(210,0,46,0.9009978991596639) 18%, rgba(45,0,219,0.9346113445378151) 85%, rgba(10,0,255,0.9374124649859944) 99%);
-
   }
 
    .integer.required {
@@ -76,7 +84,6 @@
     border-width:2px;
     background: rgb(255,0,0);
     background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(210,0,46,0.9009978991596639) 18%, rgba(45,0,219,0.9346113445378151) 85%, rgba(10,0,255,0.9374124649859944) 99%);
-
   }
 
 }

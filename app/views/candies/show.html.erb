@@ -3,15 +3,17 @@
   <img src="https://cdn.hellosubscription.com/wp-content/uploads/2018/12/28012446/korean-snack-box-january-2019-6.jpg" />
   <div class="card-trip-infos">
     <div>
-      <h2><%= @candy.name%>  - <%= @candy.composition%></h2>
+      <h2><%= @candy.name %></h2>
+      <p><%= @candy.composition %></p>
+      <p><span> <%= @candy.address %></span></p>
     </div>
-    <h2 class="card-trip-pricing"><%= @candy.price %> $</h2>
+    <h2 class="card-trip-pricing"><%= @candy.price%> $</h2>
   </div>
   <%= simple_form_for [@candy, @order_item] do |f| %>
-  <div>
-  <%= f.input :quantity %>
+  <div class="qty">
+  <%= f.input :quantity, input_html: { min: '0', step: 'any' } %>
   </div>
-  <%= f.submit class: 'btn-primary' %>
+  <%= f.submit "Add to card", class: 'btn-primary' %>
   <% end %>
 </div>
 
