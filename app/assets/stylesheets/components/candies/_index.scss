@@ -1,22 +1,25 @@
 .box-candy {
-  justify: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  // justify: center;
   display: inline-block;
   background-color: 00000;
   /* width: 500px; */
-  height: 600px;
+  width: 200px;
+  height: 200px;
   border: 5px solid black;
   padding: 20px;
   margin: 30px 5px;
   border-radius: 10px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
 
 .box-map {
   justify: center;
   display: inline-block;
-  background-color: 00000;
+  // background-color: 00000;
   /* width: 500px; */
   height: 500px;
   border: 5px solid black;
@@ -27,11 +30,11 @@
   display: flex;
   flex-direction: column;
 }
-.center-box1 {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-}
+// .center-box1 {
+//   width: 100vw;
+//   display: flex;
+//   justify-content: center;
+// }
 
 img {
   height:300px;
