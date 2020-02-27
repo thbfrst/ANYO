@@ -33,27 +33,38 @@
 }
 
 
-
 .topnav input[type=text] {
-
   float: left;
-  border-radius: 20px;
+  border-radius: 100px;
   height: 50px;
-  width: 400px;
   padding: 6px 10px;
   border: none;
-  margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
-  text-align: left
+  text-align: left;
+  border: 4px solid black;
+  color:#9D9D9D;
+  width: 405px;
 }
 
+.search-btn{
+  border-radius: 100px;
+  height: 50px;
+  padding: 6px 10px;
+  border: none;
+  margin-right: 16px;
+  font-size: 17px;
+  text-align: center;
+  border: 4px solid black;
+  color:#9D9D9D;
+  margin-top: 30px;
+}
 
-.box1 {
+.box {
+  justify-content: space-around;
   background: rgb(255,0,0);
-  background: linear-gradient(180deg, rgba(255,0,0,1) 4%, rgba(83,0,255,0.19511554621848737) 89%);
+background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(210,0,46,0.9009978991596639) 18%, rgba(45,0,219,0.9346113445378151) 85%, rgba(10,0,255,0.9374124649859944) 99%);
   display: inline-block;
-  width: 300px;
   height: 250px;
   border: 5px solid black;
   padding: 20px;
@@ -62,52 +73,18 @@
   text-align: center;
 }
 
-.box2 {
-  text-align: center;
-  background: rgb(255,0,0);
-  background: linear-gradient(180deg, rgba(255,0,0,1) 4%, rgba(83,0,255,0.19511554621848737) 89%);
-  display: inline-block;
-  width: 300px;
-  height: 250px;
-  border: 5px solid black;
-  padding: 20px;
-  margin: 30px 5px;
-  border-radius: 10px;
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  margin: 20px 50px;
 }
 
-
-.box3 {
-  text-align: center;
-  background: rgb(255,0,0);
-  background: linear-gradient(180deg, rgba(255,0,0,1) 4%, rgba(83,0,255,0.19511554621848737) 89%);
-  display: inline-block;
-  width: 300px;
-  height: 250px;
-  border: 5px solid black;
-  padding: 20px;
-  margin: 5px;
-  border-radius: 10px;
+.first-card{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
 }
-
-
-.box4 {
-  text-align: center;
-  background: rgb(255,0,0);
-  background: linear-gradient(180deg, rgba(255,0,0,1) 4%, rgba(83,0,255,0.19511554621848737) 89%);
-  display: inline-block;
-  width: 300px;
-  height: 250px;
-  border: 5px solid black;
-  padding: 20px;
-  margin: 5px;
-  border-radius: 10px;
-}
-
-
-
-
-
-
 
 .footer {
   background: #F4F4F4;
@@ -134,4 +111,27 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+
+.logo{
+  background: rgb(255,0,0);
+background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(210,0,46,0.9009978991596639) 18%, rgba(45,0,219,0.9346113445378151) 85%, rgba(10,0,255,0.9374124649859944) 99%);
+  border: 5px solid black;
+  border-radius: 100px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 15px;
+  color:black;
+  font-size: 800%;
+  text-align: center;
+}
+
+.logo h1{
+  color:black;
+  font-size: 690%;
+  text-align: center;
+}
+
+.home-text {
+  margin-top: 34px;
 }

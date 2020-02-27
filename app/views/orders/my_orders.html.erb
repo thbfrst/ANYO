@@ -1,0 +1,16 @@
+<% @my_orders.each do |order|%>
+  <% order.order_items.each do |item| %>
+<div class="card-product">
+  <img src="https://cdn.hellosubscription.com/wp-content/uploads/2018/12/28012446/korean-snack-box-january-2019-6.jpg" />
+  <div class="card-product-infos">
+              <p><strong><%= item.candy.name%></strong> - <%= item.candy.composition%> Total price: <%= item.candy.price %> $
+              <%= link_to "❌", order_item_path(item),
+                        method: :delete,
+                        data: { confirm: "Are you sure?" } %></p>
+  </div>
+</div>
+          <% end %>
+    <% end %>
+
+
+  <%= link_to "Back home", root_path, class:'btn btn-primary'%>

@@ -1,3 +1,32 @@
+
+
+<div class="container">
+  <div class="first-card">
+    <div class="logo-search">
+     <div class="logo">
+      ANYO
+      </div>
+      <div class="topnav">
+        <input type="text" value="name" placeholder="Enter candy name">
+      </div>
+      <span class="search-btn">
+      <%= link_to "Search", candies_path, class:"btn btn-flat" %>
+      </span>
+    </div>
+      <div class="home-text">
+        <h2>ANYO is a online store that let you purchase all kind of korean candies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. </h2>
+      </div>
+  </div>
+
+  <div class="cards">
+    <% @candies.each do |candy|%>
+      <div class="box">
+        <%= link_to candy.name, candy_path(candy), class:"btn btn-flat" %>
+      </div>
+      <% end %>
+  </div>
+</div>
+
 <div class="footer">
   <div class="footer-links">
     <a href="#"><i class="fab fa-github"></i></a>
@@ -6,68 +35,9 @@
     <a href="#"><i class="fab fa-twitter"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
+
   <div class="footer-copyright">
-    Thanks for visiting!<br><i class="fas fa-heart"></i>
+    Thanks for visiting!
   </div>
 </div>
-
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="#">
- <img src="=photo-1563262924-641a8b3d397f_qfo7z1" />
-</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
-      </li>
-      <li class="nav-item dropdown">
-        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Candy</a>
-          <a class="dropdown-item" href="#">About</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://images-na.ssl-images-amazon.com/images/I/71sBXasyMLL._SL1200_.jpg);">
-  <div class="container">
-    <h1>ANYO</h1>
-    <p>Eat candies</p>
-    <div class="topnav">
-  <input type="text" placeholder="Enter candy name">
-</div>
-
-    <a class="btn btn-flat" href="#">Buy now</a>
-  </div>
-</div>
-
-
-<div class="box1">
-  <h2>BOX1</h2>
-</div>
-
-
-<div class="box2">
-  <h2>BOX2</h2>
-</div>
-
-
-<div class="box3">
-  <h2>BOX1</h2>
-</div>
-
-
-<div class="box4">
-  <h2>BOX2</h2>
-</div>
-
 

@@ -1,0 +1,68 @@
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.btn-primary {
+    background: white;
+    border-radius: 50px;
+    border-color: black;
+    border-width:2px;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black;
+    background: rgb(255,0,0);
+    background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(210,0,46,0.9009978991596639) 18%, rgba(45,0,219,0.9346113445378151) 85%, rgba(10,0,255,0.9374124649859944) 99%);
+  }
+
+.btn {
+  width: 200px;
+  margin-bottom:20px;
+  margin-right: 20px;
+}
+

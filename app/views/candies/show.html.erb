@@ -1,18 +1,18 @@
-<div class="card-product">
-  <img src="https://i.pinimg.com/736x/cd/bd/c8/cdbdc86d885fbbe1c3a3e739d6e565da.jpg" />
-  <div class="card-product-infos">
-    <h2><%= @candy.name%></h2>
-    <p>
-      <ul>
-        <% @candy.each do |candy| %>
-        <li> <%= candy.name %>
-          <%= candy.composition %>
-        <%= link_to "❌", candy_path(candy),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
-        <% end %>
-        </li>
-      </ul>
-</p>
+
+<div class="card-trip">
+  <img src="https://cdn.hellosubscription.com/wp-content/uploads/2018/12/28012446/korean-snack-box-january-2019-6.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= @candy.name%>  - <%= @candy.composition%></h2>
+    </div>
+    <h2 class="card-trip-pricing"><%= @candy.price %> $</h2>
   </div>
+  <%= simple_form_for [@candy, @order_item] do |f| %>
+  <div>
+  <%= f.input :quantity %>
+  </div>
+  <%= f.submit class: 'btn-primary' %>
+  <% end %>
 </div>
+
+<%= link_to "Back home", root_path, class:'btn btn-primary'%>

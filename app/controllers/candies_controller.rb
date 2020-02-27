@@ -13,6 +13,7 @@ class CandiesController < ApplicationController
 
   def show
     @candy = Candy.find(params[:id])
+    @order_item = OrderItem.new
   end
 
   def new
@@ -21,6 +22,7 @@ class CandiesController < ApplicationController
 
   def create
     @candy = Candy.new(candy_params)
+    @candy.user = current_user
     if @candy.save
       redirect_to candy_path(@candy)
     else
@@ -29,7 +31,7 @@ class CandiesController < ApplicationController
   end
 
   def edit
-    @candy = Candy.find(params[:id])
+    @candy = current_user.candies.find_by(id: params[:id])
   end
 
   def update
@@ -50,7 +52,7 @@ class CandiesController < ApplicationController
   private
 
   def candy_params
-    params.require(:candy).permit(:name)
+    params.require(:candy).permit(:name, :composition, :price)
   end
 
 end
