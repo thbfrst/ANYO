@@ -3,6 +3,17 @@ class CandiesController < ApplicationController
 
   def index
     @candies = Candy.all
+      if params[:query].present?
+        sql_query = "composition ILIKE :query"
+         @candies = Candy.where(sql_query, query: "%#{params[:query]}%")
+        end
+
+    @markers = @candies.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def show
@@ -46,7 +57,7 @@ class CandiesController < ApplicationController
   private
 
   def candy_params
-    params.require(:candy).permit(:name, :composition, :price)
+    params.require(:candy).permit(:name, :composition, :address, :price, :availability)
   end
 
 end

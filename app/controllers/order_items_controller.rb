@@ -12,7 +12,6 @@ class OrderItemsController < ApplicationController
     @order_item = OrderItem.new
   end
 
-
   def create
     #creer un panier si payed true
     @order = current_order

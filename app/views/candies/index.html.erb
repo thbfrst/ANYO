@@ -1,2 +1,35 @@
 
+<!-- candy product -->
+
+<div class="center-box1">
+
+<div class="cards">
+  <% @candies.each do |candy|%>
+    <div class="box">
+      <h2><%= candy.name %></h2>
+      <%= link_to "Buy now", candy_path(candy), class:"btn btn-flat" %>
+      </div>
+  <% end %>
+</div>
+
+
+<!--
+map body -->
+
+<!-- <div class='sidebar'>
+  <div class='heading'>
+    <h1>Find Nearby</h1>
+  </div>
+  <div id='listings' class='listings'></div>
+</div>
+ -->
+
+
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
 

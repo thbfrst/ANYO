@@ -4,10 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :orders
+  has_many :orders, dependent: :destroy
 
   #enlever le panier si pas d'user
 
-  has_many :candies
+  has_many :candies, dependent: :destroy
 
 end
