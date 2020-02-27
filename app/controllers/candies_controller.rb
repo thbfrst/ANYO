@@ -8,10 +8,13 @@ class CandiesController < ApplicationController
          @candies = Candy.where(sql_query, query: "%#{params[:query]}%")
         end
 
-    @markers = @candies.map do |flat|
+
+    @candies = Candy.geocoded
+    @markers = @candies.map do |candy|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: candy.latitude,
+        lng: candy.longitude,
+        infoWindow: render_to_string(partial: "candies/infowindow", locals: { candy: candy })
       }
     end
   end
