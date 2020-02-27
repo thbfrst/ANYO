@@ -1,5 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,4 +14,5 @@
 
 #dropdownMenuButton {
   background-color: black;
+  border-radius: 50px;
 }
