@@ -17,10 +17,16 @@
     <%end%>
      </ul>
 
-    <div class="box2">You have the following items on sale:
-      <li><%= @candies.last.name %></li>
-    </div>
+    <% if !@candies.last.nil? %>
 
+      <div class="box2">You have the following items on sale:
 
+        <li><%= @candies&.last&.name %>
+        <%= link_to "❌", candy_path(@candies&.last),
+                          method: :delete,
+                          data: { confirm: "Are you sure?" } %>
+        <%= link_to "🖌", edit_candy_path(@candies&.last) %></li>
+      </div>
+    <% end %>
 </div>
 

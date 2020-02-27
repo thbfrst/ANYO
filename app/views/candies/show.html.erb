@@ -12,7 +12,7 @@
   </div>
   <%= simple_form_for [@candy, @order_item] do |f| %>
   <div class="qty">
-  <%= f.input :quantity, input_html: { min: '0', max: @candy.availability, step: 'any' } %>
+  <%= f.input :quantity, input_html: { min: '1', max: @candy.availability, step: 'any' } %>
   </div>
   <%= f.submit "Add to card", class: 'btn-primary' %>
   <% end %>
