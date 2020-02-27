@@ -3,7 +3,9 @@
 <div class="card-product">
   <img src="https://cdn.hellosubscription.com/wp-content/uploads/2018/12/28012446/korean-snack-box-january-2019-6.jpg" />
   <div class="card-product-infos">
-              <p><strong><%= item.candy.name%></strong> - <%= item.candy.composition%> Total price: <%= item.candy.price %> $
+              <p><strong><%= item.candy.name%></strong> - <%= item.candy.composition%>
+              <span><p>Total price : <%= item.candy.price %>  $</p></span>
+              <span><p>Total quantity : <%= item.quantity %> </p></span>
               <%= link_to "❌", order_item_path(item),
                         method: :delete,
                         data: { confirm: "Are you sure?" } %></p>
@@ -14,3 +16,17 @@
 
 
   <%= link_to "Back home", root_path, class:'btn btn-primary'%>
+
+
+<div class="box">
+  <% @my_orders.each do |order|%>
+    <% order.order_items.each do |item| %>
+      <ul>
+        <%= item.candy.name %> - <%= item.quantity %> boxes for <%= item.candy.price %> $
+      </ul>
+      <% end %>
+  <% end %>
+  Total to pay: <%= @total_orders %> $
+  <%= link_to "Checkout", root_path, class:'btn btn-primary'%>
+</div>
+
