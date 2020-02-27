@@ -3,12 +3,13 @@
 
 <div class="center-box1">
 
-<div class="box-candy">
-  <h2>BUY NOW BB</h2>
-<img src="https://images-na.ssl-images-amazon.com/images/I/71Y2FCGR42L._SL1500_.jpg">
-
-  <p>Lotte milk candy available </p>
-  <a class="btn btn-flat" href="#">Buy now</a>
+<div class="cards">
+  <% @candies.each do |candy|%>
+    <div class="box">
+      <h2><%= candy.name %></h2>
+      <%= link_to "Buy now", candy_path(candy), class:"btn btn-flat" %>
+      </div>
+  <% end %>
 </div>
 
 
@@ -31,7 +32,4 @@ map body -->
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
-
-
-
 
