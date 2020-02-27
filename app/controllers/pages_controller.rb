@@ -3,4 +3,10 @@ class PagesController < ApplicationController
   def home
     @candies = Candy.all
   end
+
+  def profile
+    @orders = current_user.orders
+    @username = current_user.username
+    @candies = current_user.candies
+  end
 end
