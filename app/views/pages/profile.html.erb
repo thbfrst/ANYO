@@ -12,7 +12,7 @@
         <% @orders.each do |order|%>
           You ordered the following items:
           <%  order.order_items.each do |order_item|%>
-         <li>  <%= order_item.candy.name %></li>
+         <li>  <%= order_item.candy.name %> <%= link_to 'Confirm order', my_orders_orders_path %></li>
           <%end%>
     <%end%>
      </ul>
@@ -21,8 +21,8 @@
 
       <div class="box2">You have the following items on sale:
 
-        <li><%= @candies&.last&.name %>
-        <%= link_to "❌", candy_path(@candies&.last),
+        <li><%= @candies&.last&.name %> - <%= @candies&.last&.availability %> box(es)
+                <%= link_to "❌", candy_path(@candies&.last),
                           method: :delete,
                           data: { confirm: "Are you sure?" } %>
         <%= link_to "🖌", edit_candy_path(@candies&.last) %></li>

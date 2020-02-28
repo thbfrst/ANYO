@@ -6,7 +6,7 @@
               <p><strong><%= item.candy.name%></strong> - <%= item.candy.composition%>
               <span><p>Price : <%= item.candy.price %>  $</p></span>
               <span><p>Total quantity : <%= item.quantity %> </p></span>
-              <span><p>Pick-up time : <%= item.minutes.to_i %> minutes </p></span>
+              <span><p>Pick-up time : <%= (item.created_at + (item.minutes || 0).minutes).strftime("%H:%M") %></p></span>
               <%= link_to "❌", order_item_path(item),
                         method: :delete,
                         data: { confirm: "Are you sure?" } %></p>
