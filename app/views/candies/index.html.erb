@@ -1,24 +1,28 @@
 
 <!-- candy product -->
 
-<div class="center-box1">
+<div class="center-box1 candies-container">
 
-<div class="cards">
-  <% @candies.each do |candy|%>
-    <div class="box">
-      <h2><%= candy.name %></h2>
-      <%= link_to "View details", candy_path(candy), class:"btn btn-flat" %>
-      </div>
-  <% end %>
+    <div class="cards">
+      <% @candies.each do |candy|%>
+        <div class="box">
+          <h2><%= candy.name %></h2>
+          <%= link_to "View details", candy_path(candy), class:"btn btn-flat" %>
+          </div>
+      <% end %>
+    </div>
+
+
+
+  <div id="map"
+    style="width: 100%;
+    width: 600px;
+
+    height: 1000px;"
+
+
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  >
 </div>
-
-
-
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
 

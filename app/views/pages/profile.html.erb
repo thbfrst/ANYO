@@ -10,9 +10,9 @@
 
     <ul>
         <% @orders.each do |order|%>
-          You ordered the following items:
+          <p>You have the following items in your basket:</p>
           <%  order.order_items.each do |order_item|%>
-         <li>  <%= order_item.candy.name %> <%= link_to 'Confirm order', my_orders_orders_path %></li>
+         <%= order_item.candy.name %> <%= link_to '🟢', my_orders_orders_path, title:"Confirm" %>
           <%end%>
     <%end%>
      </ul>
@@ -20,13 +20,14 @@
     <% if !@candies.last.nil? %>
 
       <div class="box2">You have the following items on sale:
-
-        <li><%= @candies&.last&.name %> - <%= @candies&.last&.availability %> box(es)
-                <%= link_to "❌", candy_path(@candies&.last),
-                          method: :delete,
-                          data: { confirm: "Are you sure?" } %>
-        <%= link_to "🖌", edit_candy_path(@candies&.last) %></li>
-      </div>
-    <% end %>
+        <ul>
+          <%= @candies&.last&.name %> - <%= @candies&.last&.availability %> box(es)
+                  <%= link_to "🔴", candy_path(@candies&.last), title:"Delete",
+                            method: :delete,
+                            data: { confirm: "Are you sure?" } %>
+          <%= link_to "🟠", edit_candy_path(@candies&.last), title:"Edit" %>
+        </div>
+      <% end %>
+    </ul>
 </div>
 
