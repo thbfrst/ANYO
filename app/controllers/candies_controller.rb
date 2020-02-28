@@ -45,7 +45,7 @@ class CandiesController < ApplicationController
   def update
     @candy = Candy.find(params[:id])
     if @candy.update(candy_params)
-      redirect_to @candy
+      redirect_to profile_path
     else
       render :edit
     end
