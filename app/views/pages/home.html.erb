@@ -15,11 +15,14 @@
 
 <div class="container">
   <div class="topnav">
-    <input type="text" placeholder="Enter your favorite candy">
+    <form action="candies" method="get">
+    <%= text_field_tag :query, params[:query], placeholder:"Enter your favorite candy" %>
   </div>
   <span>
-    <%= link_to "Search", candies_path, id:"roger", class:"search-button" %>
+    <button <%= link_to "Search", candies_path, id:"roger", class:"search-button" %>
+    </button>
   </span>
+  </form>
   <div class="topnav">
     <%= link_to "Sell your candies", new_candy_path, class:"btn btn-primary" %>
   </div>
