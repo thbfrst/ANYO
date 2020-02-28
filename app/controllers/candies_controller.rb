@@ -8,10 +8,13 @@ class CandiesController < ApplicationController
          @candies = Candy.where(sql_query, query: "%#{params[:query]}%")
         end
 
-    @markers = @candies.map do |flat|
+
+    @candies = Candy.geocoded
+    @markers = @candies.map do |candy|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: candy.latitude,
+        lng: candy.longitude,
+        infoWindow: render_to_string(partial: "candies/infowindow", locals: { candy: candy })
       }
     end
   end
@@ -29,7 +32,7 @@ class CandiesController < ApplicationController
     @candy = Candy.new(candy_params)
     @candy.user = current_user
     if @candy.save
-      redirect_to candy_path(@candy)
+      redirect_to profile_path
     else
       render :new
     end
@@ -40,8 +43,9 @@ class CandiesController < ApplicationController
   end
 
   def update
+    @candy = Candy.find(params[:id])
     if @candy.update(candy_params)
-      redirect_to candy_path(@candy)
+      redirect_to @candy
     else
       render :edit
     end
