@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(version: 2020_02_27_150352) do
     t.datetime "updated_at", null: false
     t.string "composition"
     t.integer "price"
+    t.bigint "user_id"
     t.float "latitude"
     t.float "longitude"
     t.string "address"
-    t.bigint "user_id"
     t.integer "availability"
     t.index ["user_id"], name: "index_candies_on_user_id"
   end
