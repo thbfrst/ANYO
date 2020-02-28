@@ -7,7 +7,7 @@
   <% @candies.each do |candy|%>
     <div class="box">
       <h2><%= candy.name %></h2>
-      <%= link_to "Buy now", candy_path(candy), class:"btn btn-flat" %>
+      <%= link_to "View details", candy_path(candy), class:"btn btn-flat" %>
       </div>
   <% end %>
 </div>
