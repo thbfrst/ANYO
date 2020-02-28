@@ -5,10 +5,10 @@
 
     <div class="cards">
       <% @candies.each do |candy|%>
-        <div class="box">
+        <div class="candybox">
           <h2><%= candy.name %></h2>
           <%= link_to "View details", candy_path(candy), class:"btn btn-flat" %>
-          </div>
+        </div>
       <% end %>
     </div>
 
