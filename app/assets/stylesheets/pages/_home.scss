@@ -187,6 +187,11 @@
 }
 
 .loginform{
+  display: flex;
+  flex-direction: column;
+  align-item: center;
+  justify-content: center;
+
   a {
     background: rgb(255,0,0);
     background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(210,0,46,0.9009978991596639) 18%, rgba(45,0,219,0.9346113445378151) 85%, rgba(10,0,255,0.9374124649859944) 99%);
@@ -195,11 +200,24 @@
     font-size: 20px;
     padding: 4px;
     text-align: center;
+    display: block;
+    width: 130px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: black
   }
+
   a:hover{
     text-decoration: none;
-    color: white
+    color: white;
+    transition: 0.3s;
   }
+
+
+    h2 {
+      font-size: 50px;
+    }
 }
 
 .new_user{
@@ -216,7 +234,7 @@
     font-size: 35px;
     margin-top: 40px;
     margin-bottom: 50px;
-    width: 140px;
+    width: 180px;
 }
 .form-actions .btn:hover {
     color: white
@@ -225,9 +243,53 @@
 
 
 
+#user_username {
+  border-radius: 50px;
+}
 
 
+#user_password_confirmation {
+  border-radius: 50px;
+}
 
+.signupbox {
+  display: flex;
+  flex-direction: column;
+  align-item: center;
+  justify-content: center;
 
+  a {
+    background: rgb(255,0,0);
+    background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(210,0,46,0.9009978991596639) 18%, rgba(45,0,219,0.9346113445378151) 85%, rgba(10,0,255,0.9374124649859944) 99%);
+    border-radius: 50px;
+    border-color: black;
+    border-width:4px;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 29px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width: 130px;
+    text-align: center;
+    color: black
+  }
+
+  a:hover{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    }
+
+    h2 {
+        justify-content: center;
+  align-item: center;
+
+      display: flex;
+      font-size: 50px;
+    }
+
+    }
 
 
