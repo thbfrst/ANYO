@@ -4,12 +4,12 @@ class CandiesController < ApplicationController
   def index
     @candies = Candy.all
       if params[:query].present?
-        sql_query = "composition ILIKE :query"
-         @candies = Candy.where(sql_query, query: "%#{params[:query]}%")
+        sql_query = "name ILIKE :query"
+         @candies = Candy.search_by_name params[:query]
         end
 
 
-    @candies = Candy.geocoded
+    @candies = @candies.geocoded
     @markers = @candies.map do |candy|
       {
         lat: candy.latitude,
