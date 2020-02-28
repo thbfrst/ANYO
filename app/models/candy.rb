@@ -12,7 +12,7 @@ pg_search_scope :search_by_name,
   has_many :order_items
 
   belongs_to :user
-  has_many :order_items
+  has_many :order_items, dependent: :destroy
   validates :name, presence: true
   validates :composition, presence: true
   validates :price, presence: true

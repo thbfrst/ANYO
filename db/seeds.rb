@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Candy.destroy_all
+
 user = User.create(email: "seed@seed.seed", password: "password", password_confirmation: "password")
 
 candies_attributes = [
