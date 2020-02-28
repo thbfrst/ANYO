@@ -21,10 +21,10 @@
 
 
 
+
+
+
 <div class="boxx">
-
-
-<div class="box">
   <% @my_orders.each do |order|%>
     <% order.order_items.each do |item| %>
       <ul>
@@ -36,6 +36,7 @@
   <%= link_to "Checkout", root_path, class:'btn btn-primary'%>
 </div>
 </div>
+
 
   <%= link_to "Back", candies_path, class:'btn btn-primary'%>
 
