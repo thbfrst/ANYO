@@ -70,5 +70,39 @@
   width: 100px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  .form-group {
+    margin-top: 100px;
+  }
+}
+
+
+.integer.required {
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 50px;
+  border-width:2px;
+  background: rgb(255,0,0);
+  background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(210,0,46,0.9009978991596639) 18%, rgba(45,0,219,0.9346113445378151) 85%, rgba(10,0,255,0.9374124649859944) 99%);
+}
+
+#order_item_quantity {
+  color: white;
+}
+
+#order_item_minutes {
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  width: 100%;
+  height: 300px;
+  border-radius: 50px;
+  margin-bottom: 20px;
 }
 
