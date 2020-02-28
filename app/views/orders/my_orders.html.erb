@@ -1,3 +1,6 @@
+<div class="wrap">
+  <div class="wrap2">
+
 <% @my_orders.each do |order|%>
   <% order.order_items.each do |item| %>
 <div class="card-product">
@@ -14,12 +17,10 @@
 </div>
           <% end %>
     <% end %>
+</div>
 
 
-  <%= link_to "Back", candies_path, class:'btn btn-primary'%>
-
-
-<div class="box">
+<div class="boxx">
   <% @my_orders.each do |order|%>
     <% order.order_items.each do |item| %>
       <ul>
@@ -30,4 +31,8 @@
   Total to pay: <%= @total_orders %> $
   <%= link_to "Checkout", root_path, class:'btn btn-primary'%>
 </div>
+</div>
+
+  <%= link_to "Back", candies_path, class:'btn btn-primary'%>
+
 
