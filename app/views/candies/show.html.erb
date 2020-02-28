@@ -1,23 +1,27 @@
 
-<div class="card-trip">
-  <img src="https://cdn.hellosubscription.com/wp-content/uploads/2018/12/28012446/korean-snack-box-january-2019-6.jpg" />
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= @candy.name %></h2>
-      <p><%= @candy.composition %></p>
-      <p><span> <%= @candy.address %></span></p>
-      <p><span> Available boxes: <%= @candy.availability %></span></p>
+<div class="container">
+  <div class="box">
+    <img src="https://cdn.hellosubscription.com/wp-content/uploads/2018/12/28012446/korean-snack-box-january-2019-6.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @candy.name %></h2>
+        <p><%= @candy.composition %></p>
+        <p><span> <%= @candy.address %></span></p>
+        <p><span> Available boxes: <%= @candy.availability %></span></p>
+      </div>
+      <h2 class="card-trip-pricing"><%= @candy.price%> $</h2>
     </div>
-    <h2 class="card-trip-pricing"><%= @candy.price%> $</h2>
   </div>
+
   <%= simple_form_for [@candy, @order_item] do |f| %>
-  <div class="qty">
-  <%= f.input :quantity, placeholder: '1', input_html: { value: '1', min: '1', max: @candy.availability, step: 'any' } %>
-  </div>
-  <p><%= f.input :minutes, placeholder: "Minimum pick-up time is 15 min. Maximum is 60 min", input_html: { value: '15', min: 15, max: 60 } %></p>
-  <div class="pick-up-time"></div>
-  <%= f.submit "Add to card", class: 'btn-primary' %>
+    <div class="qty">
+      <%= f.input :quantity, placeholder: '1', input_html: { value: '1', min: '1', max: @candy.availability, step: 'any' } %>
+      <%= f.input :minutes, placeholder: "Minimum pick-up time is 15 min. Maximum is 60 min", input_html: { value: '15', min: 15, max: 60 } %>
+    </div>
+    <div class="pick-up-time"></div>
+    <%= f.submit "Add to card", class: 'btn-primary' %>
   <% end %>
 </div>
+
 
 <%= link_to "Back", candies_path , class:'btn btn-primary'%>
